@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+body {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif; /* Ubuntu font for a modern look */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #121212; /* Dark background for the whole page */
+  color: #e0e0e0; /* Light text color */
+  overflow: hidden; /* Prevent body scrollbars if content slightly exceeds */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
   flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  background-color: #000000; /* Pure black page background */
+}
+
+.text-input {
+  flex-grow: 1; /* Take up all available vertical space */
+  font-family: 'Ubuntu', sans-serif; /* Consistent font with the rest of the app */
+  background-color: #000000; /* Same as page background */
+  color: #e0e0e0; /* Light grey text */
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  resize: none; /* Disable textarea resizing by user */
+  font-family: 'Courier New', Courier, monospace; /* Monospaced font for typing feel */
+}
+
+.status-bar {
+  background-color: #1a1a1a; /* Slightly lighter than black for contrast */
+  color: #a0a0a0; /* Dimmer text for status */
+  padding: 8px 20px;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 14px;
+  border-top: 1px solid #333; /* Subtle top border */
 }
 
-.App-link {
-  color: #61dafb;
+.status-bar > div {
+  margin-left: 20px; /* Space between status items */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.status-bar > div:first-child {
+  margin-left: 0;
 }
